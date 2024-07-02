@@ -11,7 +11,7 @@ public class AdminMain {
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
-            System.out.println("Admin Menu:");
+            System.out.println("Menu:");
             System.out.println("1- View Menu");
             System.out.println("2- View Additions");
             System.out.println("3- Add New Item to Menu");
@@ -27,6 +27,6 @@ public class AdminMain {
                 
                     
 
-       // scann
+       
     }
 }
