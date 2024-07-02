@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class BurgerMasrApp {
+
     public static void main(String[] args) {
         Menu menu = new Menu();
         UserMain userMain = new UserMain(menu);
@@ -8,13 +8,13 @@ public class BurgerMasrApp {
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
-            System.out.println("Welcome to BurgerMasr");
+            System.out.println("Welcome to our resturant ");
             System.out.println("1- User Mode");
             System.out.println("2- Admin Mode");
             System.out.print("Please select a mode: ");
-            int mode = scanner.nextInt();
+            int selected = scanner.nextInt();
 
-            switch (mode) {
+            switch (selected) {
                 case 1:
                     userMain.showMainMenu();
                     break;
