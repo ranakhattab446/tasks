@@ -22,12 +22,4 @@ public class Order {
         return total;
     }
 
-    @Override
-    public String toString() {
-        StringBuilder orderDetails = new StringBuilder("Order: " + item.getName() + "\nAdditions: ");
-        for (Additions addition : additions) {
-            orderDetails.append(addition.getName()).append(", ");
-        }
-        return orderDetails.toString();
-    }
-}
+    
