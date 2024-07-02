@@ -34,17 +34,5 @@ public class Menu {
         return additions;
     }
 
-    public void showMenu() {
-        System.out.println("Menu: ");
-        for (int i = 0; i < items.size(); i++) {
-            System.out.println((i + 1) + ". " + items.get(i));
-        }
-    }
-
-    public void showAdditions() {
-        System.out.println("Additions:");
-        for (int i = 0; i < additions.size(); i++) {
-            System.out.println((i + 1) + ". " + additions.get(i));
-        }
-    }
+    
 }
