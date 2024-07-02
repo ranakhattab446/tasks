@@ -12,10 +12,10 @@ public class UserMain {
 
         while (true) {
             System.out.println("Welcome to our restaurant");
-            menu.showMenu();
-            System.out.print("Please select an option: ");
-            int choice = scanner.nextInt();
-            String selectedItem = menu.getItems().get(choice - 1);
+            
+            System.out.print("Please select one: ");
+            int selected = scanner.nextInt();
+            String selectedItem = menu.getItems().get(selected - 1);
 
             Order order = new Order(selectedItem);
 
@@ -23,28 +23,18 @@ public class UserMain {
             int addChoice = scanner.nextInt();
 
             if (addChoice == 1) {
-                menu.showAdditions();
-                System.out.print("Please select options (like 1, 2): ");
-                scanner.nextLine(); // consume newline
-                String[] additions = scanner.nextLine().split(",");
+            
+                System.out.print("Please select options  1 or 2: ");
+                scanner.nextLine();
+                String[] additions = scanner.nextLine()
                 for (String addition : additions) {
-                    int addIndex = Integer.parseInt(addition.trim()) - 1;
-                    order.addAddition(menu.getAdditions().get(addIndex));
-                }
-            }
+                    
 
             System.out.println("Your order is:");
             System.out.println(order);
             System.out.print("1- Confirm\n2- Back to Menu\nPlease select an option: ");
             int confirmChoice = scanner.nextInt();
 
-            if (confirmChoice == 1) {
-                Receipt receipt = new Receipt(order);
-                receipt.printReceipt();
-                break;
-            }
-        }
-
-        scanner.close();
+            
     }
 }
