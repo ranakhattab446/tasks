@@ -15,16 +15,16 @@ public class UserMain {
             
             System.out.print("Please select one: ");
             int selected = scanner.nextInt();
-            String selectedItem = menu.getItems().get(selected - 1);
+            String selectedItem = menu.getItems().get(selected );
 
             Order order = new Order(selectedItem);
 
             System.out.print("Do you like to add any additions? (1-Yes, 2-No): ");
-            int addChoice = scanner.nextInt();
+            int options = scanner.nextInt();
 
-            if (addChoice == 1) {
+            if (options == 1) {
             
-                System.out.print("Please select options  1 or 2: ");
+                System.out.print("Please select option  1 or 2: ");
                 scanner.nextLine();
                 String[] additions = scanner.nextLine()
                 for (String addition : additions) {
@@ -32,8 +32,8 @@ public class UserMain {
 
             System.out.println("Your order is:");
             System.out.println(order);
-            System.out.print("1- Confirm\n2- Back to Menu\nPlease select an option: ");
-            int confirmChoice = scanner.nextInt();
+            System.out.print("1- Confirm \n2- Back to Menu \nPlease select an option: ");
+            
 
             
     }
